@@ -1,0 +1,33 @@
+{
+  "parser": "babel-eslint",
+  "extends": "airbnb",
+  "plugins": [
+    "react",
+    "jsx-a11y",
+    "import"
+  ],
+  "rules": {
+    "prefer-destructuring": ["warn", {"object": true, "array": false}],
+    "import/no-named-as-default": 0,
+    "import/no-named-as-default-member": 0,
+    "import/named": 0,
+    "max-len": ["warn", 120],
+    "comma-dangle": "off",
+    "class-methods-use-this": "off",
+    "object-curly-newline": "off",
+    "no-underscore-dangle": "off",
+    "no-param-reassign": "off",
+    "no-console": "off", // TODO remove for production!,
+    "spaced-comment": "off",
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+  },
+  "globals": {
+    "document": true,
+    "window": true,
+    "HTMLInputElement": true,
+    "FileReader": true,
+    "SyntheticEvent": true,
+    "SyntheticInputEvent": true,
+    "Image": true
+  }
+}

@@ -1,10 +1,11 @@
 import React from 'react';
 import { cn } from '@bem-react/classname';
 import { RegistryConsumer } from '@bem-react/di';
-import './App.css';
+import './App.scss';
 import Header from './Containers/Header';
 
 const cnApp = cn('App');
+const cnPage = cn('Page');
 const cnButton = cn('Button');
 
 const AppCommon = () => (
@@ -15,8 +16,15 @@ const AppCommon = () => (
 
       return (
         <>
-          <Header />
-          {Button && <Button className="Simple" text="Просто" />}
+          <div className={cnPage()}>
+            <div className={cnPage('Content')}>
+              <Header />
+              {Button && <Button className="Simple" text="Просто" />}
+            </div>
+            <div className={cnPage('Footer')}>
+              Футер
+            </div>
+          </div>
         </>
       );
     }}
@@ -25,36 +33,3 @@ const AppCommon = () => (
 );
 
 export default AppCommon;
-
-//
-//
-// import Header from './Containers/Header';
-//
-//
-//
-//
-// const App = () => (
-//   <div className="App">
-//     <Header />
-//     <header className="App-header">
-//       <img src={logo} className="App-logo" alt="logo" />
-//       { console.log('sdf')}
-//       <p>
-//         Edit
-//         <code>src/App.js</code>
-//         and save to reload.
-//       </p>
-//       <a
-//         className="App-link"
-//         href="https://reactjs.org"
-//         target="_blank"
-//         rel="noopener noreferrer"
-//       >
-//         Learn React
-//       </a>
-//     </header>
-//   </div>
-// );
-//
-//
-// export default App;

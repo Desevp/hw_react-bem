@@ -1,5 +1,70 @@
-.header {
-  &__test {
-    background-color: green;
+@import '../../Common/Styles/style.scss';
+
+.Header {
+  position: fixed;
+  width: 100%;
+  height: 92px;
+  border-bottom: 1px solid $border-color;
+  background-color: $body-bg;
+  z-index: 1;
+
+  @media screen and (max-width: $phablet) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 64px;
+    justify-content: space-between;
+    border-bottom: none;
+  }
+
+  &-Inner {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    max-width: 1140px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 40px;
+    box-sizing: border-box;
+
+    @media screen and (max-width: $tablet) {
+      padding: 0 30px;
+    }
+
+    @media screen and (max-width: $phablet) {
+      justify-content: space-between;
+    }
+
+    @media screen and (max-width: $mobile) {
+      padding: 0 20px;
+    }
+  }
+
+  &-Pseudo {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 92px;
+    z-index: -1;
+
+    @media screen and (max-width: $phablet) {
+      height: 64px;
+    }
+  }
+
+  &-Nav {
+    @media screen and (max-width: $phablet) {
+      display: none;
+    }
+  }
+
+  &-Burger {
+    display: none;
+
+    @media screen and (max-width: $phablet) {
+      display: block;
+    }
   }
 }

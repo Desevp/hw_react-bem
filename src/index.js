@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import './Common/Styles/fonts.scss';
 import AppMobile from './App@mobile';
 import AppDesktop from './App@desktop';
 
 import * as serviceWorker from './serviceWorker';
 
-const device = 'mobile';
+const device = 'desktop';
 
 ReactDOM.render(
   device === 'desktop' ? <AppDesktop /> : <AppMobile />,

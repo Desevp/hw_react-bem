@@ -5,16 +5,16 @@ type Props = {
   className: string
 };
 
-const Base = (props: Props) => {
-  if (!props) {
-    return null;
-  }
+const Button = (props: Props) => {
   const { text, className } = props;
   return (
     <div className={className}>
-      {text}
+      <div>
+        {text}
+      </div>
+      <div>  desktop </div>
     </div>
   );
 };
 
-export default Base;
+export default Button;

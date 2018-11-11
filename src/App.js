@@ -6,24 +6,21 @@ import Header from './Containers/Header';
 
 const cnApp = cn('App');
 const cnPage = cn('Page');
-const cnButton = cn('Button');
+const cnFooter = cn('Footer');
 
 const AppCommon = () => (
   <RegistryConsumer>
     {(registries) => {
       const registry = registries[cnApp()];
-      const Button = registry.get(cnButton());
+      const Footer = registry.get(cnFooter());
 
       return (
         <>
           <div className={cnPage()}>
             <div className={cnPage('Content')}>
               <Header />
-              {Button && <Button className="Simple" text="Просто" />}
             </div>
-            <div className={cnPage('Footer')}>
-              Футер
-            </div>
+            <Footer className={cnPage('Footer')} />
           </div>
         </>
       );

@@ -1,14 +1,14 @@
 import { cn } from '@bem-react/classname';
 import { Registry, withRegistry } from '@bem-react/di';
 import AppCommon from './App';
-import Button from './Common/Components/Button/Button@desktop';
+import Footer from './Containers/Footer';
 
 const cnApp = cn('App');
-const cnButton = cn('Button');
+const cnFooter = cn('Footer');
 
 const registry = new Registry({ id: cnApp() });
 
-registry.set(cnButton(), Button);
+registry.set(cnFooter(), Footer);
 
 const App = withRegistry(registry)(AppCommon);
 

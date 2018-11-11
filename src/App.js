@@ -19,6 +19,14 @@ const AppCommon = () => (
           <div className={cnPage()}>
             <div className={cnPage('Content')}>
               <Header />
+              <main className={cnPage('Inner')}>
+                <h1 className={cnPage('Title')}>
+                  Лента событий
+                </h1>
+                <div className={cnPage('Grid')}>
+                  1
+                </div>
+              </main>
             </div>
             <Footer className={cnPage('Footer')} />
           </div>

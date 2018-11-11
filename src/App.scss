@@ -1,3 +1,5 @@
+@import './Common/Styles/style.scss';
+
 .Page {
   min-height: 100vh;
   display: flex;
@@ -9,5 +11,53 @@
 
   &-Footer {
     flex-shrink: 0;
+  }
+
+  &-Inner {
+    margin: 0 auto;
+    padding: 34px 40px;
+    box-sizing: border-box;
+
+    @media screen and (max-width: $tablet) {
+      padding: 34px 30px;
+    }
+
+    @media screen and (max-width: $mobile) {
+      padding: 34px 20px;
+    }
+  }
+
+  &-Title {
+    margin: 0 0 32px;
+    @include font(36px, $font-family, 42px);
+  }
+
+  &-Grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 20px;
+    grid-auto-flow: dense;
+
+    @media screen and (max-width: $phablet) {
+      display: block;
+    }
+
+    &Item {
+      position: relative;
+      grid-row: span 1 / auto;
+
+      &_s {
+        grid-column: span 2 / auto;
+      }
+
+      &_m {
+        grid-column: span 3 / auto;
+      }
+
+      &_l {
+        grid-column: span 4 / auto;
+        grid-row: span 3 / auto;
+      }
+    }
   }
 }

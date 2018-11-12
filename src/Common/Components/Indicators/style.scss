@@ -1,0 +1,35 @@
+@import '../../../Common/Styles/style.scss';
+
+.Indicators {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+
+  &-Item {
+    margin-right: 52px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &-Name {
+    @include smallString();
+  }
+
+  &-Value {
+    @include smallString($grey, 600);
+
+    &_type_temperature {
+      &::after {
+        content: 'C';
+      }
+    }
+
+    &_type_humidity {
+      &::after {
+        content: '%';
+      }
+    }
+  }
+}

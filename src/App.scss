@@ -31,32 +31,53 @@
     margin: 0 0 32px;
     @include font(36px, $font-family, 42px);
   }
+}
 
-  &-Grid {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-gap: 20px;
-    grid-auto-flow: dense;
+.Grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 20px;
+  grid-auto-flow: dense;
 
-    @media screen and (max-width: $phablet) {
-      display: block;
+  @media screen and (max-width: $phablet) {
+    display: block;
+  }
+
+  &-Item {
+    position: relative;
+    grid-row: span 1 / auto;
+
+    &_size_s {
+      grid-column: span 2 / auto;
+
+      .Event-Info {
+        flex-direction: column;
+        justify-content: space-between;
+
+        @media screen and (max-width: $phablet) {
+          flex-direction: row;
+        }
+      }
+
+      .Event-Time {
+        margin-top: 20px;
+
+        @media screen and (max-width: $phablet) {
+          margin-top: 0;
+        }
+      }
     }
 
-    &Item {
-      position: relative;
-      grid-row: span 1 / auto;
+    &_size_m {
+      grid-column: span 3 / auto;
+    }
 
-      &_s {
-        grid-column: span 2 / auto;
-      }
+    &_size_l {
+      grid-column: span 4 / auto;
+      grid-row: span 3 / auto;
 
-      &_m {
-        grid-column: span 3 / auto;
-      }
-
-      &_l {
-        grid-column: span 4 / auto;
-        grid-row: span 3 / auto;
+      .Event-Description {
+        @include largeString();
       }
     }
   }

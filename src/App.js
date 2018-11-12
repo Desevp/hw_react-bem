@@ -80,6 +80,19 @@ const AppCommon = () => (
                     time="18:21, Сегодня"
                     description="В комнате открыто окно, закройте его и повторите попытку»"
                   />
+                  <Event
+                    type="music"
+                    iconType="thermal"
+                    className={cnGrid('Item', { size: 'm' })}
+                    titleEvent="Музыка включена"
+                    titleDevice="Яндекс.Станция"
+                    time="18:16, Сегодня"
+                    albumcover="https://avatars.yandex.net/get-music-content/193823/1820a43e.a.5517056-1/m1000x1000"
+                    artist="Florence & The Machine"
+                    trackName="Big God"
+                    trackLenght="4:31"
+                    volume="80"
+                  />
                 </div>
               </main>
             </div>

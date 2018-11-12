@@ -6,7 +6,7 @@
   height: 92px;
   border-bottom: 1px solid $border-color;
   background-color: $body-bg;
-  z-index: 1;
+  z-index: 3;
 
   @media screen and (max-width: $phablet) {
     position: fixed;

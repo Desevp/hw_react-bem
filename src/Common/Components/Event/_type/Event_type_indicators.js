@@ -12,6 +12,7 @@ const cnEvent = cn('Event');
 
 const EventIndicators: ModBody = (EventBase, {
   className,
+  iconType,
   titleEvent,
   titleDevice,
   time,
@@ -22,7 +23,7 @@ const EventIndicators: ModBody = (EventBase, {
   <div className={classnames(className, cnEvent())}>
     <div className={cnEvent('Inner')}>
       <div className={cnEvent('Top')}>
-        <Icon className={cnEvent('Icon')} type="stats" />
+        <Icon className={cnEvent('Icon')} type={iconType} />
         <div className={cnEvent('Title')}>
           {titleEvent}
         </div>

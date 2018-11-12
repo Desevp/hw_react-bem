@@ -41,27 +41,28 @@ const AppCommon = () => (
                   />
                   <Event
                     className={cnGrid('Item', { size: 's' })}
-                    iconType="stats"
+                    iconType="key"
                     titleEvent="Дверь открыта"
                     titleDevice="Сенсор входной двери"
                     time="18:50, Сегодня"
                   />
                   <Event
                     className={cnGrid('Item', { size: 's' })}
-                    iconType="stats"
+                    iconType="robot"
                     titleEvent="Уборка закончена"
                     titleDevice="Пылесос"
                     time="18:45, Сегодня"
                   />
                   <Event
                     className={cnGrid('Item', { size: 's' })}
+                    iconType="router"
                     titleEvent="Новый пользователь"
                     titleDevice="Роутер"
                     time="18:45, Сегодня"
                   />
                   <Event
                     type="indicators"
-                    iconType="stats"
+                    iconType="thermal"
                     className={cnGrid('Item', { size: 'm' })}
                     titleEvent="Изменен климатический режим"
                     titleDevice="Сенсор микроклимата"
@@ -72,7 +73,7 @@ const AppCommon = () => (
                   />
                   <Event
                     mode="critical"
-                    iconType="stats"
+                    iconType="ac"
                     className={cnGrid('Item', { size: 'm' })}
                     titleEvent="Невозможно включить кондиционер"
                     titleDevice="Кондиционер"

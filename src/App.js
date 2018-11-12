@@ -6,6 +6,7 @@ import Header from './Containers/Header';
 import Event from './Common/Components/Event';
 
 import diagramPicture from './Common/assets/Richdata.svg';
+import robotPicture from './Common/assets/image.jpg';
 
 const cnApp = cn('App');
 const cnPage = cn('Page');
@@ -82,7 +83,7 @@ const AppCommon = () => (
                   />
                   <Event
                     type="music"
-                    iconType="thermal"
+                    iconType="music"
                     className={cnGrid('Item', { size: 'm' })}
                     titleEvent="Музыка включена"
                     titleDevice="Яндекс.Станция"
@@ -92,6 +93,42 @@ const AppCommon = () => (
                     trackName="Big God"
                     trackLenght="4:31"
                     volume="80"
+                  />
+                  <Event
+                    type="alert"
+                    iconType="fridge"
+                    className={cnGrid('Item', { size: 'm' })}
+                    titleEvent="Заканчивается молоко"
+                    titleDevice="Холодильник"
+                    time="17:23, Сегодня"
+                    description="Кажется, в холодильнике заканчивается молоко. Вы хотите добавить его в список покупок?"
+                  />
+                  <Event
+                    className={cnGrid('Item', { size: 's' })}
+                    iconType="battery"
+                    titleEvent="Зарядка завершена"
+                    titleDevice="Оконный сенсори"
+                    time="16:22, Сегодня"
+                    description="Ура! Устройство «Оконный сенсор» снова в строю!"
+                  />
+                  <Event
+                    mode="critical"
+                    type="picture"
+                    iconType="camera"
+                    className={cnGrid('Item', { size: 'l' })}
+                    titleEvent="Пылесос застрял"
+                    titleDevice="Сенсор движения"
+                    time="16:17, Сегодня"
+                    description="Робопылесос не смог сменить свое местоположение в течение последних 3 минут. Похоже, ему нужна помощь."
+                    imageSrc={robotPicture}
+                    imageAlt="photo"
+                  />
+                  <Event
+                    className={cnGrid('Item', { size: 's' })}
+                    iconType="kettle"
+                    titleEvent="Вода вскипела"
+                    titleDevice="Чайник"
+                    time="16:20, Сегодня"
                   />
                 </div>
               </main>

@@ -2,7 +2,7 @@ import React from 'react';
 import './style.scss';
 import { cn } from '@bem-react/classname';
 
-import logoImage from '../../Common/assets/logo.svg';
+import logoImage from '../../assets/logo.svg';
 
 const cnLogo = cn('Logo');
 

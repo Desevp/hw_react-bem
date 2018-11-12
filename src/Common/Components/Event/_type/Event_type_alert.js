@@ -3,21 +3,20 @@ import { withBemMod, ModBody } from '@bem-react/core';
 import { cn, classnames } from '@bem-react/classname';
 
 import Icon from '../../Icon/index';
+import Button from '../../Button/index';
 
 import closeImage from '../../../assets/icons/cross.svg';
 import linkImage from '../../../assets/icons/next.svg';
 
 const cnEvent = cn('Event');
 
-const EventPicture: ModBody = (EventBase, {
+const EventAlert: ModBody = (EventBase, {
   className,
   iconType,
   titleEvent,
   titleDevice,
   time,
-  description,
-  imageSrc,
-  imageAlt
+  description
 }) => (
   <div className={classnames(className, cnEvent())}>
     <div className={cnEvent('Inner')}>
@@ -49,11 +48,11 @@ const EventPicture: ModBody = (EventBase, {
             {description}
           </div>
         )}
-        <div className={cnEvent('Picture')}>
-          <img
-            src={imageSrc}
-            alt={imageAlt}
-          />
+        <div className={cnEvent('Alert')}>
+          <div className={cnEvent('AlertControls')}>
+            <Button text="Да" isMarked className={cnEvent('AlertButton')} />
+            <Button text="Нет" className={cnEvent('AlertButton')} />
+          </div>
         </div>
       </div>
     </div>
@@ -61,5 +60,5 @@ const EventPicture: ModBody = (EventBase, {
 );
 
 
-const EventTypePicture = withBemMod(`${cnEvent()}`, { type: 'picture' }, EventPicture);
-export default EventTypePicture;
+const EventTypeAlert = withBemMod(`${cnEvent()}`, { type: 'alert' }, EventAlert);
+export default EventTypeAlert;

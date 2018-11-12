@@ -1,0 +1,23 @@
+@import '../../Styles/style.scss';
+
+.Nav {
+  position: relative;
+
+  &-Item {
+    display: inline-block;
+    margin-right: 28px;
+    opacity: 0.6;
+
+    a {
+      @include font(16px, $font-family, 20px);
+      font-weight: 600;
+      text-decoration: none;
+      color: $text-color;
+    }
+
+    &_isActive {
+      pointer-events: none;
+      opacity: 1;
+    }
+  }
+}

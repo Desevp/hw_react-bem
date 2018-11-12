@@ -1,9 +1,9 @@
 import React, { memo } from 'react';
 import './style.scss';
 import { cn } from '@bem-react/classname';
-import Logo from '../Logo';
-import Nav from '../Nav';
-import Burger from '../Burger';
+import Logo from '../../Common/Components/Logo';
+import Nav from '../../Common/Components/Nav';
+import Burger from '../../Common/Components/Burger';
 
 const cnHeader = cn('Header');
 
